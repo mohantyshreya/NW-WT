@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: red;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 48px;
+    color: white;
+    animation: blink 1s infinite;
+    padding: 20px 0;
+  }
+
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  p {
+    font-size: 24px;
+    color: white;
+    animation: scroll 5s linear infinite;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Warning</h1>
+  <p>Read the message</p>
+</body>
+</html>

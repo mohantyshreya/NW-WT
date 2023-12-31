@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Friend Form</title>
+  <style>
+    .form-box {
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 50px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+  </style>
+</head>
+<body>
+
+<div class="form-box">
+  <form>
+    <label for="friendName">Enter name of your friend:</label>
+    <input type="text" id="friendName" name="friendName"><br><br>
+
+    <label for="fileSelection">Choose the file you want to post to your friend:</label><br>
+    <input type="file" id="fileSelection" name="fileSelection"><br><br>
+
+    <label for="fileContent">What does the file contain:</label><br>
+    <input type="checkbox" id="image" name="fileContent" value="Image">
+    <label for="image">Image</label>
+    <input type="checkbox" id="sourceCode" name="fileContent" value="Source Code">
+    <label for="sourceCode">Source code</label>
+    <input type="checkbox" id="binaryCode" name="fileContent" value="Binary Code">
+    <label for="binaryCode">Binary code</label><br><br>
+
+    <label for="formCompletion">You have completed the form:</label>
+    <button type="submit">Submit Query</button>
+  </form>
+</div>
+
+</body>
+</html>

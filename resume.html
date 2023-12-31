@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: "Avener", sans-serif;
+        }
+
+        th,
+        td {
+            border: 2px solid white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .nameTable tr:nth-child(1) {
+            background-color: #fe8737;
+        }
+
+        .secondTable tr:nth-child(1) {
+            background-color: #ffd9ce;
+        }
+
+        .ThirdTable tr:nth-child(1) {
+            background-color: #ffeee7;
+        }
+
+        #blink {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="table-margin nameTable">
+        <tr>
+            <th><b>Shreya Mohanty,West Midnapore, West Bengal,721101</b></th>
+        </tr>
+    </table>
+    <table class="secondTable">
+        <tr>
+            <th width="50%">
+                <ul>
+                    <li>Matric</li>
+                    <li>HS</li>
+                    <li>BCA</li>
+                </ul>
+            </th>
+            <th width="50%">
+                <ul>
+                    <li>
+                        <a href=" https://www.youtube.com/" target="_blank">YouTube</a>
+                    </li>
+                    <li>
+                        <a href=" https://stackoverflow.com/" target="_blank">Stack Overflow</a>
+                    </li>
+                    <li>
+                        <a href="https://www.programiz.com/" target="_blank">Programiz</a>
+                    </li>
+                </ul>
+            </th>
+        </tr>
+    </table>
+    <table class="secondTable">
+        <tr>
+            <th width="33.33%">
+                <marquee scrollamount="4" behavior="scroll" direction="left">Hello all this is scroll message</marquee>
+            </th>
+            <th width="33.33%">
+                <div id="blink" class="blinking-reminder">
+                    Hello all this is blinker.
+                </div>
+            </th>
+            <th width="33.33%">
+                <img src="Service/shreya.jpg" height="100px" width="100px">
+            </th>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        var blink =
+            document.getElementById('blink');
+
+        setInterval(function () {
+            blink.style.opacity =
+                (blink.style.opacity == 0 ? 1 : 0);
+        }, 800);  
+    </script>
+</body>
+
+</html>

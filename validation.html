@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="myForm" onsubmit="validateForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="gmail">Gmail:</label>
+        <input type="email" id="gmail" name="gmail" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        <small>Format: 1234567890</small>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="subject">Choose Subject:</label>
+        <select id="subject" name="subject" required>
+            <option value="">Select Subject</option>
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+            <option value="english">English</option>
+        </select>
+
+        <label for="semester">Choose Semester:</label>
+        <select id="semester" name="semester" required>
+            <option value="">Select Semester</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="fall">Fall</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm(event) {
+            var form = document.getElementById('myForm');
+            var name = form.name.value;
+            var gmail = form.gmail.value;
+            var phone = form.phone.value;
+            var password = form.password.value;
+            var subject = form.subject.value;
+            var semester = form.semester.value;
+
+            if (!name || !gmail || !phone || !password || !subject || !semester) {
+                alert('All fields must be filled out');
+                event.preventDefault();
+                return;
+            }
+
+            var phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Please enter a valid phone number');
+                event.preventDefault();
+                return;
+            }
+
+
+            alert('Form submitted successfully!');
+        }
+    </script>
+
+</body>
+</html>
